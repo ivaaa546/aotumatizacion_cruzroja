@@ -1,0 +1,21 @@
+[
+    {
+        "first_name": "Margarit Celeste",
+        "last_name": "Xol",
+        "birthday": "2015-01-20T06:00:00.000Z",
+        "gender_id": 2,
+        "address": "Coyombalam",
+        "community": "Aldea",
+        "has_dpi": false
+    },
+    {
+        "first_name": "Alma Lesbia Margarita",
+        "last_name": "Caal Chub",
+        "birthday": "1999-12-15T06:00:00.000Z",
+        "gender_id": 2,
+        "document_number": "3211402781613",
+        "address": "Coyombalam",
+        "community": "Aldea",
+        "has_dpi": true
+    }
+]

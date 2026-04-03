@@ -1,0 +1,76 @@
+[
+    {
+        "first_name": "Yeny Gabriela",
+        "last_name": "Bol Bac",
+        "birthday": "2011-04-20T06:00:00.000Z",
+        "gender_id": 2,
+        "address": null,
+        "community": null,
+        "has_dpi": true,
+        "document_number": "2228817471601",
+        "consultation": {
+            "motive": "Dolor de estomago de 3 semanas.",
+            "comment": "Epigastralgia."
+        },
+        "medical_history": {
+            "medical_history": "NR",
+            "surgical_history": "NR",
+            "injury_history": "NR",
+            "allergic_history": "NR",
+            "addiction_history": "NR",
+            "familiar_history": "No refiere",
+            "gestation": "0",
+            "birth": "0",
+            "misbirth": "0",
+            "cst": "0",
+            "hv": "0",
+            "hm": "0",
+            "fur": "26/02/2024"
+        },
+        "vitals": {
+            "heart_rate": "104",
+            "breathing_frequency": null,
+            "pulse": null,
+            "pa": "120/50",
+            "temperature": "36.5",
+            "medical_comment": ""
+        }
+    },
+    {
+        "first_name": "Carmen",
+        "last_name": "Chub de Icó",
+        "birthday": "1941-10-22T06:00:00.000Z",
+        "gender_id": 2,
+        "address": "Coyombalam",
+        "community": "Aldea",
+        "has_dpi": true,
+        "document_number": "1645830841601",
+        "consultation": {
+            "motive": "Dolor de estomago de 2 meses.",
+            "comment": "Px refiere mialgias y artralgias el cual asocia a dolor de estomago."
+        },
+        "medical_history": {
+            "medical_history": "No refiere",
+            "surgical_history": "No refiere",
+            "injury_history": "No refiere",
+            "allergic_history": "No refiere",
+            "addiction_history": "No refiere",
+            "familiar_history": "No refiere",
+            "gestation": "1",
+            "birth": "1",
+            "misbirth": "0",
+            "cst": "0",
+            "hv": "1",
+            "hm": "0",
+            "fur": "0"
+        },
+        "vitals": {
+            "heart_rate": "86",
+            "breathing_frequency": null,
+            "pulse": null,
+            "pa": "200/80",
+            "temperature": "36.5",
+            "medical_comment": "Tomas de P/A: 200/80, 180/70. Glicemia: 270. Oximetría: 97."
+        }
+    }
+]
