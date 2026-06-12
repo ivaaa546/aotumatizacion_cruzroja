@@ -19,7 +19,7 @@ const DEFAULTS = {
 // Valores fijos del sistema SIGGA
 const FIXED = {
     country_of_birth_id: 1,
-    town_id: 8,
+    town_id: 2,
     delegation_id: 4,
     document_id: 1,
     document_country_id: 1,
@@ -40,7 +40,7 @@ function headers() {
 }
 
 // ─── Validación de personas ───────────────────────────────────────────────────
-const REQUIRED_FIELDS = ['first_name', 'last_name', 'birthday', 'gender_id', 'address', 'community'];
+const REQUIRED_FIELDS = ['first_name', 'last_name', 'birthday', 'gender_id', 'address'];
 
 function validate(persona, index) {
     const missing = REQUIRED_FIELDS.filter((f) => !persona[f]);
@@ -90,15 +90,15 @@ async function crearPersona(persona) {
     return json;
 }
 
-async function registrarServicio(person_id) {
+async function registrarServicio(person_id, persona) {
     const body = {
         activity_helping_id: DEFAULTS.activity_helping_id,
         person_id,
         program_service_id: DEFAULTS.program_service_id,
-        morbidity_id: DEFAULTS.morbidity_id,
+        morbidity_id: persona.morbidity_id || DEFAULTS.morbidity_id,
         doctor_id: DEFAULTS.doctor_id,
         activity_helping_detail_at: DEFAULTS.activity_date,
-        comment: '',
+        comment: persona.comment || '',
         created_by_user_id: DEFAULTS.created_by_user_id,
     };
 
@@ -159,7 +159,7 @@ async function procesarPersonas(personas) {
 
         // 2. Registrar servicio
         try {
-            const respServicio = await registrarServicio(person_id);
+            const respServicio = await registrarServicio(person_id, persona);
             console.log(`  ✓ Servicio registrado. Respuesta: ${JSON.stringify(respServicio)}`);
             exitosos++;
         } catch (err) {

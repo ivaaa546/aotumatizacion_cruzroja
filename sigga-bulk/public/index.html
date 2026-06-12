@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGGA Bulk Loader</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob red"></div>
+        <div class="blob purple"></div>
+    </div>
+
+    <div class="container glass-panel">
+        <header>
+            <div class="logo-area">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="icon-pulse">
+                    <path d="M12 2V6M12 18V22M6 12H2M22 12H18M19.0711 19.0711L16.2426 16.2426M19.0711 4.92893L16.2426 7.75736M4.92893 19.0711L7.75736 16.2426M4.92893 4.92893L7.75736 7.75736" stroke="#ff4757" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <h1>SIGGA <span>Bulk Loader</span></h1>
+            </div>
+            <div class="header-subtitle">
+                <p>Automatización de Carga de Pacientes y Consultas</p>
+                <button id="morbilitiesBtn" class="btn-icon-round" title="Ver Diagnósticos">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                        <polyline points="10 9 9 9 8 9"></polyline>
+                    </svg>
+                </button>
+                <button id="settingsBtn" class="btn-icon-round" title="Configuración">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="3"></circle>
+                        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33 1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82 1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                    </svg>
+                </button>
+            </div>
+        </header>
+
+        <div class="panel-content">
+            <div class="controls-section">
+                
+                <div class="form-group">
+                    <label>Tipo de Operación</label>
+                    <div class="radio-group">
+                        <label class="radio-card">
+                            <input type="radio" name="jobType" value="upload" checked>
+                            <div class="card-content">
+                                <span class="title">Personas y Servicios</span>
+                                <span class="desc">Crea paciente y registra detalle de ayuda.</span>
+                            </div>
+                        </label>
+                        <label class="radio-card">
+                            <input type="radio" name="jobType" value="consultation">
+                            <div class="card-content">
+                                <span class="title">Consultas Médicas</span>
+                                <span class="desc">Flujo completo con historial y signos vitales.</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Archivo de Datos (JSON)</label>
+                    <div class="drop-zone" id="dropZone">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="17 8 12 3 7 8"></polyline>
+                            <line x1="12" y1="3" x2="12" y2="15"></line>
+                        </svg>
+                        <p class="drop-hint">Arrastra y suelta tu archivo JSON aquí</p>
+                        <p class="drop-or">o</p>
+                        <button class="btn-outline" onclick="document.getElementById('fileInput').click()">Explorar Archivos</button>
+                        <input type="file" id="fileInput" accept=".json" hidden>
+                        <div id="fileStatus" class="file-status hidden">
+                            <span id="fileName">archivo.json</span>
+                            <button id="removeFile" class="btn-icon">✖</button>
+                        </div>
+                    </div>
+                </div>
+
+                <button id="startBtn" class="btn-primary" disabled>
+                    <span class="btn-text">Iniciar Procesamiento</span>
+                    <div class="spinner hidden"></div>
+                </button>
+            </div>
+
+            <div class="terminal-section">
+                <div class="terminal-header">
+                    <div class="dots">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <span class="terminal-title">Terminal de Ejecución</span>
+                </div>
+                <div class="terminal-body" id="terminalOutput">
+                    <div class="log-line info">Esperando iniciar trabajo...</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="morbilitiesModal" class="modal hidden">
+        <div class="modal-content glass-panel">
+            <div class="modal-header">
+                <h2>Morbilidades <span>(Diagnósticos)</span></h2>
+                <button id="closeMorbilities" class="btn-icon">✖</button>
+            </div>
+            <div class="search-container">
+                <input type="text" id="morbilitiesSearch" placeholder="Buscar por nombre o ID...">
+            </div>
+            <div id="morbilitiesList" class="table-container">
+                <p>Cargando...</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="settingsModal" class="modal hidden">
+        <div class="modal-content glass-panel">
+            <div class="modal-header">
+                <h2>Configuración <span>.env</span></h2>
+                <button id="closeSettings" class="btn-icon">✖</button>
+            </div>
+            <form id="settingsForm">
+                <div class="settings-grid">
+                    <div class="settings-column">
+                        <h3>General</h3>
+                        <div class="form-group-inline">
+                            <label>Base URL</label>
+                            <input type="text" name="SIGGA_BASE_URL" placeholder="https://...">
+                        </div>
+                        <div class="form-group-inline">
+                            <label>Token (Bearer)</label>
+                            <input type="password" name="SIGGA_TOKEN" placeholder="Token de acceso">
+                        </div>
+                    </div>
+                    
+                    <div class="settings-column">
+                        <h3>Valores por Defecto</h3>
+                        <div class="form-group-inline">
+                            <label>Activity ID</label>
+                            <input type="number" name="DEFAULT_ACTIVITY_HELPING_ID">
+                        </div>
+                        <div class="form-group-inline">
+                            <label>Program ID</label>
+                            <input type="number" name="DEFAULT_PROGRAM_SERVICE_ID">
+                        </div>
+                        <div class="form-group-inline">
+                            <label>Morbidity ID</label>
+                            <input type="number" name="DEFAULT_MORBIDITY_ID">
+                        </div>
+                        <div class="form-group-inline">
+                            <label>Doctor ID</label>
+                            <input type="number" name="DEFAULT_DOCTOR_ID">
+                        </div>
+                        <div class="form-group-inline">
+                            <label>User ID</label>
+                            <input type="number" name="DEFAULT_CREATED_BY_USER_ID">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" id="saveSettings" class="btn-primary">Guardar Cambios</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

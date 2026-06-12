@@ -1,0 +1,109 @@
+[
+  {
+    "first_name": "Luisa",
+    "last_name": "Maquin",
+    "birthday": "1978-01-01T06:00:00.000Z",
+    "gender_id": 2,
+    "address": "Nacimiento Raxquiché",
+    "community": "Aldea",
+    "has_dpi": false,
+    "main_phone": "53847006"
+  },
+  {
+    "first_name": "Sofia",
+    "last_name": "Choc",
+    "birthday": "1976-01-01T06:00:00.000Z",
+    "gender_id": 2,
+    "document_number": "2548460761609",
+    "address": "Nacimiento Raxquiché",
+    "community": "Aldea",
+    "has_dpi": true
+  },
+  {
+    "first_name": "Maria del Rosario",
+    "last_name": "García",
+    "birthday": "1997-01-01T06:00:00.000Z",
+    "gender_id": 2,
+    "document_number": "3531858920707",
+    "address": "Nacimiento Raxquiché",
+    "community": "Aldea",
+    "has_dpi": true
+  },
+  {
+    "first_name": "Sofia Isabel",
+    "last_name": "Cho García",
+    "birthday": "2017-01-01T06:00:00.000Z",
+    "gender_id": 2,
+    "document_number": "4146743400702",
+    "address": "Nacimiento Raxquiché",
+    "community": "Aldea",
+    "has_dpi": true
+  },
+  {
+    "first_name": "Sulvi",
+    "last_name": "Choc Chub",
+    "birthday": "2019-01-01T06:00:00.000Z",
+    "gender_id": 2,
+    "address": "Nacimiento Raxquiché",
+    "community": "Aldea",
+    "has_dpi": false
+  },
+  {
+    "first_name": "Jakelyn",
+    "last_name": "Chun",
+    "birthday": "2010-01-01T06:00:00.000Z",
+    "gender_id": 2,
+    "address": "Nacimiento Raxquiché",
+    "community": "Aldea",
+    "has_dpi": false
+  },
+  {
+    "first_name": "Josefa Maria",
+    "last_name": "Rax Tot",
+    "birthday": "2004-01-01T06:00:00.000Z",
+    "gender_id": 2,
+    "document_number": "3274465791705",
+    "address": "Nacimiento Raxquiché",
+    "community": "Aldea",
+    "has_dpi": true,
+    "main_phone": "58941787"
+  },
+  {
+    "first_name": "Edgar Dario",
+    "last_name": "Cho Rax",
+    "birthday": "2023-01-01T06:00:00.000Z",
+    "gender_id": 1,
+    "address": "Nacimiento Raxquiché",
+    "community": "Aldea",
+    "has_dpi": false
+  },
+  {
+    "first_name": "Rosa",
+    "last_name": "Sybaj Coy",
+    "birthday": "1986-01-01T06:00:00.000Z",
+    "gender_id": 2,
+    "document_number": "2574576821802",
+    "address": "Nacimiento Raxquiché",
+    "community": "Aldea",
+    "has_dpi": true
+  },
+  {
+    "first_name": "Luci Veronica",
+    "last_name": "Cho",
+    "birthday": "2014-01-01T06:00:00.000Z",
+    "gender_id": 2,
+    "address": "Nacimiento Raxquiché",
+    "community": "Aldea",
+    "has_dpi": false
+  },
+  {
+    "first_name": "Alma Cristina",
+    "last_name": "Chun Coc",
+    "birthday": "1979-01-01T06:00:00.000Z",
+    "gender_id": 2,
+    "document_number": "2366695911803",
+    "address": "Nacimiento Raxquiché",
+    "community": "Aldea",
+    "has_dpi": true
+  }
+]

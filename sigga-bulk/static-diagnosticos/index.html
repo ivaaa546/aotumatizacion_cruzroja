@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGGA - Consultor de Diagnósticos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob red"></div>
+        <div class="blob purple"></div>
+    </div>
+
+    <div class="container">
+        <header class="glass-panel">
+            <div class="logo-area">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" class="icon-pulse">
+                    <path d="M12 2V6M12 18V22M6 12H2M22 12H18M19.0711 19.0711L16.2426 16.2426M19.0711 4.92893L16.2426 7.75736M4.92893 19.0711L7.75736 16.2426M4.92893 4.92893L7.75736 7.75736" stroke="#ff4757" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <h1>SIGGA <span>Diagnósticos</span></h1>
+            </div>
+            <p class="subtitle">Consulta rápida de morbilidades y códigos</p>
+        </header>
+
+        <main class="glass-panel">
+            <div class="search-section">
+                <div class="search-wrapper">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="search-icon">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                    <input type="text" id="searchInput" placeholder="Buscar por nombre, ID o código CIE...">
+                </div>
+                <div id="stats" class="stats">Cargando diagnósticos...</div>
+            </div>
+
+            <div class="table-wrapper">
+                <table id="morbilitiesTable">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Código CIE</th>
+                            <th>Diagnóstico</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                        <!-- Data will be inserted here -->
+                    </tbody>
+                </table>
+                <div id="noResults" class="hidden">No se encontraron resultados coincidentes.</div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
